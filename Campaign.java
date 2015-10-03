@@ -20,9 +20,9 @@ public class Campaign extends HttpServlet{
 	public void doGet(HttpServletRequest req,HttpServletResponse res) throws ServletException,IOException
 	{
 		ArrayList<Object> finalArray = new ArrayList<Object>();
-		p = Integer.parseInt(req.getParameter("p"));
-		q = Integer.parseInt(req.getParameter("q"));
-		r = Integer.parseInt(req.getParameter("r"));
+		p = Integer.parseInt(req.getParameter("x"));
+		q = Integer.parseInt(req.getParameter("y"));
+		r = Integer.parseInt(req.getParameter("z"));
 		finalArray = getTotalCampaigns();
 		Gson jsonString = new Gson();
 		String json = jsonString.toJson(finalArray);
